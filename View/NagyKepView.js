@@ -2,7 +2,7 @@
 class NagyKepView {
     #kep;
     constructor(szuloElem, kep) {
-        this.#kep = kep;
+        this.#kep = kep.eleres;
         this.szuloElem = szuloElem;
         this.#htmlOsszerak();
         this.balGomb = $(".bal");
@@ -31,6 +31,7 @@ class NagyKepView {
         </div>`;
         this.szuloElem.html(txt);
     }
+    
 
     nagyKepCsere(kep){
         this.nagyKepHely.attr("src",kep);
