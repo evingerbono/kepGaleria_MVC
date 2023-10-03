@@ -15,7 +15,7 @@ class Controller {
             MODEL.bal();
             NAGYK.nagyKepCsere(MODEL.getAktKep().eleres);
         })
-        $(window).on("kiskKattint", (event) => {
+        $(window).on("kiskKattint", () => {
             NAGYK.nagyKepCsere(MODEL.getList().eleres);
         });
     }
