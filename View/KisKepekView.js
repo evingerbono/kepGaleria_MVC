@@ -1,13 +1,9 @@
-class KisKep{
+class KisKepek{
     #lista={};
     constructor(szuloElem, lista) {
         this.#lista = lista;
         this.szuloElem = szuloElem;
         this.#htmlOsszerak();
-        this.szuloElem.on('click', '.kisk-img', (event) => {
-            const kepIndex = $(event.target).data('id');
-            this.#esemenyTrigger('kiskKattint', kepIndex);
-        });
     }
 
     #htmlOsszerak() {
@@ -18,10 +14,6 @@ class KisKep{
         txt += '</div>';
         this.szuloElem.html(txt);
     }
-    #esemenyTrigger(esemenyNev) {
-        const esemeny = new CustomEvent(esemenyNev);
-        window.dispatchEvent(esemeny);
-    }
 }
 
-export default KisKep;
+export default KisKepek;

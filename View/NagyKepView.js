@@ -1,8 +1,8 @@
 
 class NagyKepView {
-    #kep;
+    #kep={};
     constructor(szuloElem, kep) {
-        this.#kep = kep.eleres;
+        this.#kep = kep;
         this.szuloElem = szuloElem;
         this.#htmlOsszerak();
         this.balGomb = $(".bal");
@@ -24,7 +24,7 @@ class NagyKepView {
         <div class="card-header text-center">Főkép</div>
         <div class="card-body text-center">
         <button type="button" class="btn btn-danger bal">Bal</button>
-        <img id="nagyKepHely" src="${this.#kep}" class="img-thumbnail" alt="Virag">
+        <img id="nagyKepHely" src="${this.#kep.eleres}" class="img-thumbnail" alt="Virag">
         <button type="button" class="btn btn-danger jobb">Jobb</button>
         </div>
         <div class="card-footer text-center">Leírás</div>
